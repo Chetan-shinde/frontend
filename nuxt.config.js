@@ -113,8 +113,7 @@ export default {
   server:{
     timing:{
       total:true
-    },
-    port:80
+    }
   },
    /*
   ** Server Middleware
