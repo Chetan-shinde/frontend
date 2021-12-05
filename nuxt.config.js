@@ -99,7 +99,7 @@ export default {
       })*/
       console.log(routes)
     },
-    middleware: ['init']
+    //middleware: ['init']
   },
   publicRuntimeConfig: {
     basePath: process.env.BASE_PATH,
