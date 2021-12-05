@@ -21,12 +21,12 @@ app.use(function(req, res, next){
     
     if(['/en/', '/en', '/de', '/de/'].includes(req.path)){
         const existsHtml = cachePage.get('homeData'); 
-        console.log(cachePage.keys());      
+        //console.log(cachePage.keys());      
         if (existsHtml) {
-            console.log("cached data ");
+            //console.log("cached data ");
             return res.end(existsHtml.html, 'utf-8')           
         }else{
-            console.log("no cahcing");
+            //console.log("no cahcing");
             res.original_end = res.end
             // rewrite res.end
                  res.end = function (data) {

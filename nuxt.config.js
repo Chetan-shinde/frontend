@@ -65,6 +65,11 @@ export default {
           }
         }
       }
+    },
+    extend(config){
+      config.devServer = {
+        ...config.devServer, ...{disableHostCheck: true}
+      }
     }
   },
 
