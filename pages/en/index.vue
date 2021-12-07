@@ -127,19 +127,25 @@ export default {
     },
     mounted(){
         this.beforemount = false;
-        jQuery('.hero-items').owlCarousel({
-            loop: true,
-            margin: 0,
-            nav: true,
-            items: 1,
-            dots: false,
-            animateOut: 'fadeOut',
-            animateIn: 'fadeIn',
-            navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
-            smartSpeed: 1200,
-            autoHeight: false,
-            autoplay: true,
-        })
+        let jqueryintrval = setInterval(function(){
+            if(typeof jQuery != 'undefined'){
+                clearInterval(jqueryintrval);
+                jQuery('.hero-items').owlCarousel({
+                    loop: true,
+                    margin: 0,
+                    nav: true,
+                    items: 1,
+                    dots: false,
+                    animateOut: 'fadeOut',
+                    animateIn: 'fadeIn',
+                    navText: ['<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>'],
+                    smartSpeed: 1200,
+                    autoHeight: false,
+                    autoplay: true,
+                })
+            }
+        }, 1000);
+
      
     },
     head(){
