@@ -6,6 +6,7 @@ export default  function ({ $axios, app, store}){
     $axios.onRequest(config=>{
         const authCookie = app.$cookies.get('auth')
         const token = store.state.init.token;
+        console.log("token "+token);
         if(token){
             if(token){
                 $axios.setHeader('Authorization', `Bearer ${token}`)
