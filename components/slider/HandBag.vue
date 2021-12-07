@@ -99,7 +99,10 @@ export default {
     /*------------------
         Product Slider
     --------------------*/
-        jQuery(".product-slider").owlCarousel({
+    let jqueryInterval = setInterval(function(){
+        if(typeof jQuery != 'undefined'){
+            clearInterval(jqueryInterval);
+            jQuery(".product-slider").owlCarousel({
                 loop: true,
                 margin: 25,
                 nav: true,
@@ -124,6 +127,9 @@ export default {
                     }
                 }
             });
+        }
+    }, 1000);
+
     }
 }
 </script>
