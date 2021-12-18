@@ -100,7 +100,7 @@ export default {
         Product Slider
     --------------------*/
         let jqueryInterval = setInterval(function(){
-            if(typeof jQuery != 'undefined'){
+            if(typeof jQuery != 'undefined' && typeof owlCarousel != 'undefined'){
                 clearInterval(jqueryInterval);
                 jQuery(".product-slider").owlCarousel({
                     loop: true,

@@ -128,7 +128,7 @@ export default {
     mounted(){
         this.beforemount = false;
         let jqueryintrval = setInterval(function(){
-            if(typeof jQuery != 'undefined'){
+            if(typeof jQuery != 'undefined' && typeof owlCarousel != 'undefined'){
                 clearInterval(jqueryintrval);
                 jQuery('.hero-items').owlCarousel({
                     loop: true,
